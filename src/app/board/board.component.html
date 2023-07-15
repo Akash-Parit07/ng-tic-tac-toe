@@ -1,0 +1,37 @@
+<app-confetti></app-confetti>
+
+<div class="grid"></div>
+<div class="lines"></div>
+<div id="end">
+  <div id="message"  class="">
+    <div>
+      <div>
+        <h1>Tic Tac Toe</h1>
+      </div>
+    </div>
+    <h2>Current Player : {{ player }}</h2>
+    <div *ngIf="winner">
+      <h2 >Player {{ winner }} won the game!</h2>
+    </div>
+    <div *ngIf="draw == 'GAME_TIED'">
+      <h2 >Game Tied!</h2>
+    </div>
+    <button *ngIf="winner || draw" (click)="newGame()" style="--content: 'Play Again!';">
+      <div class="left"></div>
+        Play Again!
+      <div class="right"></div>
+    </button>
+    <!-- <input *ngIf="winner || draw" (click)="newGame()" for="tictactoe" value="Play again"/> -->
+  </div>
+</div>
+
+<div class="center">
+  <main>
+    <app-square
+        *ngFor="let val of squares; let i = index"
+        [value]="val"
+        (click)="makeMove(i)">
+        <div></div>
+    </app-square>
+  </main>
+</div>

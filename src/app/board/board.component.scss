@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900');
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@900&display=swap');
+
+:root {
+  --text-color: hsla(210, 50%, 85%, 1);
+  --shadow-color: hsla(210, 40%, 52%, .4);
+  --btn-color: hsl(210, 80%, 42%);
+  --bg-color: #141218;
+
+  --color-1: #186cb8;
+  --color-2: #2a9a9f;
+  --color-3: #f1b211;
+  --color-4: #e83611;
+  --color-5: #f9002f;
+}
+
+// Game title
+h1{
+  font-weight: bold;
+  font-family: "Source Code Pro";
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+// Game title - end
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main {
+  width: 50vmin;
+  // height: 50vmin;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+app-square {
+  margin: 5%;
+  position: relative;
+  border-radius: 9px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  // border: 1px solid rgb(97, 96, 96);
+  height: 85px;
+  text-align: center;
+}
+
+#end {
+  background: rgb(182 185 233 / 85%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#message {
+  text-align: center;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  font-weight: bold;
+  margin-top: 6%;
+  font-family: "Source Code Pro";
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: var(--text-color);
+
+}
+
+// Play again button css
+::ng-deep {
+  button {
+    position: relative;
+    padding: 10px 20px;
+    // border: none;
+    background: none;
+    cursor: pointer;
+
+    font-family: "Source Code Pro";
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: var(--text-color);
+
+    background-color: var(--btn-color);
+    box-shadow: var(--shadow-color) 2px 2px 22px;
+    border-radius: 4px;
+    z-index: 0;
+    overflow: hidden;
+  }
+}
+
+// Play again button css - end
